@@ -1,0 +1,47 @@
+[
+    {
+        "url": "http:\/\/localhost\/lab_1\/chislo\/1",
+        "response": "1",
+        "method": "GET"
+    },
+    {
+        "url": "http:\/\/localhost\/lab_1\/chislo\/45",
+        "response": "45",
+        "method": "GET"
+    },
+    {
+        "url": "http:\/\/localhost\/lab_1\/dni\/",
+        "response": [
+            {
+                "Дата": "26.04.2019",
+                "День недели": "Пятница"
+            }
+        ],
+        "method": "GET"
+    },
+    {
+        "url": "http:\/\/localhost\/lab_1\/dni\/",
+        "response": [
+            {
+                "Дата": "26.04.2019",
+                "День недели": "Пятница"
+            }
+        ],
+        "method": "GET"
+    },
+    {
+        "url": "http:\/\/localhost\/lab_1\/city\/72",
+        "response": {
+            "Номер города": "72",
+            "Город": "Тюменская область"
+        },
+        "method": "GET"
+    },
+    {
+        "url": "http:\/\/localhost\/lab_1\/fibanachi\/5",
+        "response": {
+            "Число Фибоначчи": 8
+        },
+        "method": "GET"
+    }
+]
