@@ -1,4 +1,11 @@
+# Включаем mod_rewrite
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . index.php [L]
+
+# Устанавливаем core.php индексным файлом
+DirectoryIndex index.php
+
+# Если файл физически не найден
+RewriteCond %{REQUEST_FILENAME} !-s
+
+# то направим на core.php с параметрами URI
+RewriteRule ^(.+)$ /index.php?$1 [L]
