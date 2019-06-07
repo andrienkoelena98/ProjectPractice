@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root", "", "lb2_PP");
+$link = mysqli_connect("localhost", "root", "", "lab_2");
 $result='';
 if(isset($_GET["Clients"]))
 {

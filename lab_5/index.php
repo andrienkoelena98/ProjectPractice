@@ -129,7 +129,7 @@ $list = json_decode($file, true);
 
 if (isset($_GET["Clients"])) {
     if ($_GET["Clients"] == "Клиенты") {
-        $api = 'http://lb5pp/api.php?Clients=Клиенты';
+        $api = 'http://localhost:88/lab_5/api.php?Clients=Клиенты';
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
 //        print_r($list);
@@ -139,7 +139,7 @@ if (isset($_GET["Clients"])) {
 }
 if (isset($_GET["Client"])) {
     if ($_GET["Client"] == "Клиент") {
-        $api = 'http://lb5pp/api.php?Client=Клиент&id=' . $_GET["id"];
+        $api = 'http://localhost:88/lab_5/api.php?Client=Клиент&id=' . $_GET["id"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
 //        print_r($list);
@@ -149,7 +149,7 @@ if (isset($_GET["Client"])) {
 }
 if (isset($_GET["InsClient"])) {
     if ($_GET["InsClient"] == "Добавить") {
-        $api = 'http://lb5pp/api.php?InsClient=Добавить&name=' . $_GET["name"];
+        $api = 'http://localhost:88/lab_5/api.php?InsClient=Добавить&name=' . $_GET["name"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
         file_put_contents('lab_5.json', json_encode($list));
@@ -158,7 +158,7 @@ if (isset($_GET["InsClient"])) {
 }
 if (isset($_GET["UpdClient"])) {
     if ($_GET["UpdClient"] == "Обновить") {
-        $api = 'http://lb5pp/api.php?UpdClient=Обновить&id='.$_GET["id"].'&name=' . $_GET["name"];
+        $api = 'http://localhost:88/lab_5/api.php?UpdClient=Обновить&id='.$_GET["id"].'&name=' . $_GET["name"];
 //        echo $api;
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
@@ -169,7 +169,7 @@ if (isset($_GET["UpdClient"])) {
 }
 if (isset($_GET["DelClient"])) {
     if ($_GET["DelClient"] == "Удалить") {
-        $api = 'http://lb5pp/api.php?DelClient=Удалить&name=' . $_GET["id"];
+        $api = 'http://localhost:88/lab_5/api.php?DelClient=Удалить&name=' . $_GET["id"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
         file_put_contents('lab_5.json', json_encode($list));
@@ -181,7 +181,7 @@ if (isset($_GET["DelClient"])) {
 
 if (isset($_GET["Zayavki"])) {
     if ($_GET["Zayavki"] == "Заявки") {
-        $api = 'http://lb5pp/api.php?Zayavki=Заявки';
+        $api = 'http://localhost:88/lab_5/api.php?Zayavki=Заявки';
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
 //        print_r($list);
@@ -191,7 +191,7 @@ if (isset($_GET["Zayavki"])) {
 }
 if (isset($_GET["Zayavka"])) {
     if ($_GET["Zayavka"] == "Заявка") {
-        $api = 'http://lb5pp/api.php?Zayavka=Заявка&id=' . $_GET["id"];
+        $api = 'http://localhost:88/lab_5/api.php?Zayavka=Заявка&id=' . $_GET["id"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
 //        print_r($list);
@@ -201,7 +201,7 @@ if (isset($_GET["Zayavka"])) {
 }
 if (isset($_GET["InsZayavka"])) {
     if ($_GET["InsZayavka"] == "Добавить") {
-        $api = 'http://lb5pp/api.php?InsZayavka=Добавить&id=' . $_GET["id"];
+        $api = 'http://localhost:88/lab_5/api.php?InsZayavka=Добавить&id=' . $_GET["id"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
         file_put_contents('lab_5.json', json_encode($list));
@@ -210,7 +210,7 @@ if (isset($_GET["InsZayavka"])) {
 }
 if (isset($_GET["UpdZayavka"])) {
     if ($_GET["UpdZayavka"] == "Обновить") {
-        $api = 'http://lb5pp/api.php?UpdZayavka=Обновить&id_z'.$_GET["id_z"].'=&id_k='.$_GET["id_k"];
+        $api = 'http://localhost:88/lab_5/api.php?UpdZayavka=Обновить&id_z'.$_GET["id_z"].'=&id_k='.$_GET["id_k"];
 //        echo $api;
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
@@ -221,7 +221,7 @@ if (isset($_GET["UpdZayavka"])) {
 }
 if (isset($_GET["DelZayavka"])) {
     if ($_GET["DelZayavka"] == "Удалить") {
-        $api = 'http://lb5pp/api.php?DelZayavka=Удалить&id=' . $_GET["id"];
+        $api = 'http://localhost:88/lab_5/api.php?DelZayavka=Удалить&id=' . $_GET["id"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
         file_put_contents('lab_5.json', json_encode($list));
@@ -232,7 +232,7 @@ if (isset($_GET["DelZayavka"])) {
 
 if (isset($_GET["Uslugi"])) {
     if ($_GET["Uslugi"] == "Услуги") {
-        $api = 'http://lb5pp/api.php?Uslugi=Услуги';
+        $api = 'http://localhost:88/lab_5/api.php?Uslugi=Услуги';
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
 //        print_r($list);
@@ -242,7 +242,7 @@ if (isset($_GET["Uslugi"])) {
 }
 if (isset($_GET["Usluga"])) {
     if ($_GET["Usluga"] == "Услуга") {
-        $api = 'http://lb5pp/api.php?Usluga=Услуга&id=' . $_GET["id"];
+        $api = 'http://localhost:88/lab_5/api.php?Usluga=Услуга&id=' . $_GET["id"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
 //        print_r($list);
@@ -252,7 +252,7 @@ if (isset($_GET["Usluga"])) {
 }
 if (isset($_GET["InsUsluga"])) {
     if ($_GET["InsUsluga"] == "Добавить") {
-        $api = 'http://lb5pp/api.php?InsUsluga=Добавить&name='. $_GET["name"].'&tsena='.$_GET["tsena"] ;
+        $api = 'http://localhost:88/lab_5/api.php?InsUsluga=Добавить&name='. $_GET["name"].'&tsena='.$_GET["tsena"] ;
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
         file_put_contents('lab_5.json', json_encode($list));
@@ -261,7 +261,7 @@ if (isset($_GET["InsUsluga"])) {
 }
 if (isset($_GET["UpdUsluga"])) {
     if ($_GET["UpdUsluga"] == "Обновить") {
-        $api = 'http://lb5pp/api.php?UpdUsluga=Обновить&id='.$_GET["id"].'&name='. $_GET["name"].'&tsena='.$_GET["tsena"];
+        $api = 'http://localhost:88/lab_5/api.php?UpdUsluga=Обновить&id='.$_GET["id"].'&name='. $_GET["name"].'&tsena='.$_GET["tsena"];
 //        echo $api;
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
@@ -272,7 +272,7 @@ if (isset($_GET["UpdUsluga"])) {
 }
 if (isset($_GET["DelUsluga"])) {
     if ($_GET["DelUsluga"] == "Удалить") {
-        $api = 'http://lb5pp/api.php?DelUsluga=Удалить&id=' . $_GET["id"];
+        $api = 'http://localhost:88/lab_5/api.php?DelUsluga=Удалить&id=' . $_GET["id"];
         $ur = file_get_contents($api);
         $list[] = array('url' => $url, 'response' => json_decode($ur), 'method' => $_SERVER['REQUEST_METHOD']);
         file_put_contents('lab_5.json', json_encode($list));
